@@ -1,0 +1,43 @@
+name: New recomp proposal
+description: Propose a Dreamcast game for recompilation, or bring an existing project into DCRecomp
+title: "[New recomp] "
+labels: ["new-recomp"]
+body:
+  - type: input
+    id: game
+    attributes:
+      label: Game
+      description: Title, region, serial and version of the exact release
+      placeholder: Blue Stinger, NTSC-U, T13001N, V1.000
+    validations:
+      required: true
+  - type: input
+    id: hash
+    attributes:
+      label: SHA-256 of the main executable
+      description: Usually 1ST_READ.BIN. The hash only; never attach the file.
+  - type: input
+    id: repo
+    attributes:
+      label: Existing repository
+      description: Leave empty if the project has not started
+  - type: textarea
+    id: state
+    attributes:
+      label: Current state
+      description: Which stage of the guide you have reached, and how it was verified
+    validations:
+      required: true
+  - type: textarea
+    id: help
+    attributes:
+      label: Help wanted
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Rules
+      options:
+        - label: The project contains no disc images, BIOS, extracted game files, generated code or game text
+          required: true
+        - label: The project contains no code copied from GPL projects or projects without a license
+          required: true

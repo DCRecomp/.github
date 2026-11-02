@@ -1,0 +1,43 @@
+name: Bug report
+description: Something is wrong in a recompiled game or in its tools
+labels: ["bug"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Project version
+      description: Release or commit
+    validations:
+      required: true
+  - type: input
+    id: release
+    attributes:
+      label: Game release
+      description: Region, serial and version of your disc
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: System
+      description: Windows version, CPU, GPU and driver, controller
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what you expected
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Do not attach saves, dumps or any file extracted from the game
+      render: text
